@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { motion } from 'framer-motion';
-
-import ActiveLink from './activeLink';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const NavBar = () => {
   const navItems = [
@@ -39,6 +39,8 @@ const NavBar = () => {
   };
 
   const [isOpen, setIsOpen] = React.useState(false);
+
+  const router = useRouter();
   return (
     <>
       <div className="fixed top-0 z-40 w-full navbar bg-primary text-primary-content">
@@ -48,14 +50,15 @@ const NavBar = () => {
         <div className="flex-none hidden px-2 mx-2 lg:flex">
           <div className="flex items-stretch">
             {navItems.map((navItem) => (
-              <ActiveLink
-                key={navItem.name}
-                activeClassName="text-accent"
-                href={navItem.href}
-                passHref
-              >
-                <a className="btn btn-ghost">{navItem.name}</a>
-              </ActiveLink>
+              <Link key={navItem.name} href={navItem.href} passHref>
+                <a
+                  className={`${
+                    router.pathname === navItem.href ? 'text-accent' : ''
+                  } btn btn-ghost`}
+                >
+                  {navItem.name}
+                </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -87,14 +90,15 @@ const NavBar = () => {
         className="fixed top-0 z-50 flex flex-col w-2/3 h-screen bg-primary "
       >
         {navItems.map((navItem) => (
-          <ActiveLink
-            key={navItem.name}
-            activeClassName="text-accent"
-            href={navItem.href}
-            passHref
-          >
-            <a className="btn btn-ghost">{navItem.name}</a>
-          </ActiveLink>
+          <Link key={navItem.name} href={navItem.href} passHref>
+            <a
+              className={`${
+                router.pathname === navItem.href ? 'text-accent' : ''
+              } btn btn-ghost`}
+            >
+              {navItem.name}
+            </a>
+          </Link>
         ))}
       </motion.div>
       <div
