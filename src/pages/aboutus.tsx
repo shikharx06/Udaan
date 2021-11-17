@@ -12,7 +12,7 @@ const About = () => (
       />
     }
   >
-    <section className="flex min-w-full pt-20 bg-primary ">
+    {/* <section className="flex min-w-full pt-20 bg-primary ">
       <div className="flex flex-col mx-12 gap-11">
         <div>
           <h1 className="text-xl font-semibold">RESOURCES AND QUALITY</h1>
@@ -47,9 +47,9 @@ const About = () => (
           </p>
         </div>
       </div>
-    </section>
+    </section> */}
 
-    <section className="flex flex-col items-center gap-12 mt-12 xl:gap-24 bg-primary">
+    <section className="flex flex-col items-center gap-12 mt-24 xl:gap-24 bg-primary">
       <div className="text-center">
         <h1 className="mx-12 text-3xl font-semibold">Meet our Amazing Team</h1>
       </div>
