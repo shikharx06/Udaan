@@ -20,21 +20,33 @@ const Index = () => {
     >
       {/* Hero */}
       <section className="flex h-screen min-w-full overflow-hidden bg-primary ">
-        <div className="z-10 flex flex-col justify-around mx-auto text-center xl:mx-8 lg:w-1/2 xl:text-left">
-          <div className="flex flex-col gap-4 p-4 bg-primary bg-opacity-70 xl:bg-transparent lg:mb-16">
-            <h1 className="text-3xl font-semibold text-primary-content lg:text-3xl lg:font-bold">
+        <div className="z-10 flex flex-col justify-around mx-auto text-center xl:mx-0 lg:w-1/2 xl:text-left">
+          <div className="flex flex-col flex-wrap gap-4 p-4 bg-primary xl:mx-8 bg-opacity-80 xl:bg-transparent lg:mb-16">
+            <h1 className="text-3xl font-semibold text-primary-content lg:text-4xl lg:font-bold">
               Revolutionizing agriculture using cutting edge drones.
             </h1>
-            <p className=" text-primary-content opacity-70 lg:pl-4 lg:text-lg">
-              we provide drone surveying, imaging and lending.
-            </p>
+            <div className="xl:pr-28">
+              <p className="text-primary-content opacity-90 lg:opacity-70 lg:text-lg">
+                To survey and map the required region, we use a variety of
+                industry-specific UAV platforms, cameras, and sensors, which are
+                handled by a team of highly competent IAA certified drone
+                pilots.
+              </p>
+            </div>
           </div>
         </div>
-        <img
-          alt=""
-          className="absolute top-0 right-0 h-screen xl:w-1/2"
-          src="./assets/images/droneSpraying.jpg"
-        />
+        <div
+          className="absolute top-0 right-0 w-full h-screen bg-center bg-no-repeat bg-cover xl:w-1/2"
+          style={{
+            backgroundImage: "url('./assets/images/udaanDroneHeroImage.jpg')",
+          }}
+        >
+          {/* <img
+            alt=""
+            className=""
+            src="./assets/images/udaanDroneHeroImage.jpg"
+          /> */}
+        </div>
       </section>
 
       <section className="flex flex-col items-center gap-24 mt-8 xl:mt-24 bg-primary">
@@ -43,7 +55,7 @@ const Index = () => {
         </div>
         <div className="container flex flex-col items-center gap-14">
           {AppConfig.services.map((service, i) => (
-            <div className="px-4 " key={service.title}>
+            <div className="px-12" key={service.title}>
               <Card
                 title={service.title}
                 description={service.description}
@@ -62,7 +74,7 @@ const Index = () => {
       <section className="flex items-center justify-center mt-8 bg-black xl:mt-24">
         <div className="flex flex-wrap justify-center gap-16 p-10 xl:p-24">
           <div className="flex flex-col max-w-xl gap-8">
-            <h1 className="text-4xl font-semibold text-primary">About Us</h1>
+            <h1 className="text-4xl font-semibold text-primary">In the news</h1>
             <p className=" text-primary">
               We utilise a wide range of industry specific UAV platforms,
               cameras and sensors which are operated by a team of highly skilled
@@ -71,13 +83,24 @@ const Index = () => {
             <button className="bg-blue-600 btn max-w-max">Meet the team</button>
           </div>
           <div className="max-w-xl">
-            <img
+            <div className=" shadow-2xl relative pb-[56.25%] w-60 sm:w-64 md:w-[32rem]">
+              <iframe width="100%" 
+                className="absolute top-0 bottom-0 rounded-xl" 
+                height="100%" 
+                src="https://www.youtube.com/embed/LNzNVI69cQc"
+                title="S AGRI UDAAN camera drone inauguration by Parbatbhai Patel" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen>              
+                </iframe>
+            </div>
+            {/* <img
               className="w-full shadow-2xl rounded-xl"
               src="./assets/images/farmer.jpg"
               alt=""
               width="384"
               height="512"
-            />
+            /> */}
           </div>
         </div>
       </section>

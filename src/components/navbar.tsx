@@ -1,5 +1,6 @@
 import React from 'react';
 
+// import Image
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -45,7 +46,12 @@ const NavBar = () => {
     <>
       <div className="fixed top-0 z-40 w-full navbar bg-primary text-primary-content">
         <div className="flex-1 px-2 mx-2">
-          <span className="text-3xl font-bold font-brand">Udaan</span>
+          <div className="w-16">
+            <img src="./assets/images/udaanLogo.svg" alt="udaan" />
+          </div>
+          <span className="font-bold text-md md:text-2xl font-brand">
+            S. Agri Udaan
+          </span>
         </div>
         <div className="flex-none hidden px-2 mx-2 lg:flex">
           <div className="flex items-stretch">
