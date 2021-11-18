@@ -1,120 +1,69 @@
-import { TeamMemberCard } from '../components/teamCard';
-import { Meta } from '../layout/Meta';
-import { Main } from '../templates/Main';
-import { AppConfig } from '../utils/AppConfig';
-
+import { Meta } from '../layout/Meta'
+import { Main } from '../templates/Main'
+import { AppConfig } from '../utils/AppConfig'
+import { MdOutlineAddLocationAlt } from 'react-icons/md'
+import { IoMdCall } from 'react-icons/io'
+import React from 'react'
 const About = () => (
   <Main
     meta={
       <Meta
-        title="Udaan | Meet the team"
-        description="Meet the team behind Udaan"
+        title='Udaan | Contact Us'
+        description='Contact Udaan for Assistance'
       />
     }
   >
-    <section className="flex min-w-full pt-20 bg-primary ">
-      <div className="flex flex-col mx-12 gap-11">
+    <section className='flex flex-wrap justify-center h-full gap-16 pb-6 mx-8 my-auto overflow-hidden lg:h-screen lg:mx-16 pt-28 bg-primary'>
+      <div className='flex flex-col flex-wrap gap-12'>
         <div>
-          <h1 className="text-xl font-semibold">RESOURCES AND QUALITY</h1>
-          <p className="mt-2 text-base">
-            The data collected from our drones is collected by IAA certified
-            pilots and processed in-house using specialist software and
-            techniques by a large team of photogrammetrists, geomatics
-            surveyors, BIM modellers, CAD technicians and media editors.
-          </p>
-        </div>
-        <div>
-          <h1 className="text-xl font-semibold">
-            IAA CERTIFICATION AND SAFETY
+          <h1 className='text-2xl font-semibold lg:text-3xl text-primary-content'>
+            Get in touch with us.
           </h1>
-          <p className="mt-2 text-base ">
-            Our IAA certified flight team have developed industry specific
-            operational procedures and risk assessments which are approved by
-            the IAA and have expert knowledge in the SOP flight application
-            process. This combined with our comprehensive drone specific
-            insurance cover ensures your project is carried out safely and
-            efficiently and in compliance with the Small Unmanned Aircraft
-            (Drones) and Rockets Order S.I. 563 of 2015.
+          <p>
+            You need more information? Check what other persons are saying about
+            our product.
           </p>
         </div>
-        <div>
-          <h1 className="text-xl font-semibold">INSURANCES</h1>
-          <p className="mt-2 text-base">
-            We have worked with our insurance providers to develop comprehensive
-            industry specific policies and are currently one of very few
-            operators that can provide PL, EL and PI to the high levels often
-            required in the surveying and inspection sectors.
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <section className="flex flex-col items-center gap-12 mt-12 xl:gap-24 bg-primary">
-      <div className="text-center">
-        <h1 className="mx-12 text-3xl font-semibold">Meet our Amazing Team</h1>
-      </div>
-      <div className="flex flex-col gap-8 text-center xl:text-left">
-        <h1 className="text-2xl uppercase">Company directors</h1>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 ">
-          {AppConfig.team.directors.map((member) => (
-            <TeamMemberCard
-              key={member.name}
-              name={member.name}
-              qualification={member.qualification}
-              description={member.description}
-              designation={member.designation}
-              src=""
-            />
-          ))}
+        <div className='flex gap-8'>
+          <div>
+            <MdOutlineAddLocationAlt className="text-3xl text-primary-content" />
+          </div>
+          <div>
+            <h2 className='text-2xl font-semibold text-primary-content'>
+              Find us at the office
+            </h2>
+            <p>B 505, Narnarayan Complex, Navrangpura , Ahmedabad</p>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col gap-8 text-center xl:text-left">
-        <h1 className="text-2xl uppercase">Tech Team</h1>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 ">
-          {AppConfig.team.tech.map((member) => (
-            <TeamMemberCard
-              key={member.name}
-              name={member.name}
-              qualification={member.qualification}
-              description={member.description}
-              designation={member.designation}
-              src=""
-            />
-          ))}
+       
+     
+        <div className='flex gap-8'>
+          <div>
+            <IoMdCall className="text-3xl text-primary-content" />
+          </div>
+          <div>
+            <h2 className='text-2xl font-semibold text-primary-content'>
+            Give us a ring
+            </h2>
+            <p>B 505, Narnarayan Complex, Navrangpura , Ahmedabad</p>
+          </div>
         </div>
+       
       </div>
-      <div className="flex flex-col gap-8 text-center xl:text-left">
-        <h1 className="text-2xl uppercase">Agri Tech Team</h1>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 ">
-          {AppConfig.team.agriTech.map((member) => (
-            <TeamMemberCard
-              key={member.name}
-              name={member.name}
-              qualification={member.qualification}
-              description={member.description}
-              designation={member.designation}
-              src=""
-            />
-          ))}
-        </div>
-      </div>
-      <div className="flex flex-col gap-8 text-center xl:text-left">
-        <h1 className="text-2xl uppercase">Financial Advisors</h1>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 ">
-          {AppConfig.team.financialAdvisors.map((member) => (
-            <TeamMemberCard
-              key={member.name}
-              name={member.name}
-              qualification={member.qualification}
-              description={member.description}
-              designation={member.designation}
-              src=""
-            />
-          ))}
-        </div>
+      <div className=' shadow-2xl h-60 relative pb-[26.25%] w-60 sm:w-64 md:w-[32rem]'>
+        <iframe
+          src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d917.9162180392711!2d72.5622989!3d23.036074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f48547dc77%3A0xee8f25aa7aeeb577!2sNarnarayan%20Complex%2C%20Navrangpura%20Rd%2C%20Swastik%20Society%2C%20Navrangpura%2C%20Ahmedabad%2C%20Gujarat%20380009!5e0!3m2!1sen!2sin!4v1637181861885!5m2!1sen!2sin'
+          width='100%'
+          height='100%'
+          className='absolute top-0 bottom-0 rounded-xl'
+          style={{ border: '0' }}
+          allowFullScreen
+          loading='lazy'
+        />
       </div>
     </section>
   </Main>
-);
+)
 
-export default About;
+export default About

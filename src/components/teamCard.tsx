@@ -9,9 +9,9 @@ type TeamMember = {
 export const TeamMemberCard = (props: TeamMember) => {
   return (
     <figure className="p-8 md:flex rounded-xl md:p-0">
-      <div className="shadow-xl">
+      <div className="shadow-2xl">
         <img
-          className="w-32 h-32 mx-auto rounded-full shadow-xl md:w-48 md:h-auto md:rounded-lg"
+          className="w-32 h-32 mx-auto rounded-full shadow-xl md:w-48 md:h-full md:rounded-lg"
           src="/assets/images/userSample.jpg"
           alt=""
           width="384"

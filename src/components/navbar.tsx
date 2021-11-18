@@ -47,7 +47,7 @@ const NavBar = () => {
       <div className="fixed top-0 z-40 w-full navbar bg-primary text-primary-content">
         <div className="flex-1 px-2 mx-2">
           <div className="w-16">
-            <img src="./assets/images/udaanLogo.svg" alt="udaan" />
+            <img src="/assets/images/udaanLogo.svg" alt="udaan" />
           </div>
           <span className="font-bold text-md md:text-2xl font-brand">
             S. Agri Udaan
