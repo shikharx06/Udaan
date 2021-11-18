@@ -1,6 +1,5 @@
 import { Meta } from '../layout/Meta'
 import { Main } from '../templates/Main'
-import { AppConfig } from '../utils/AppConfig'
 import { MdOutlineAddLocationAlt } from 'react-icons/md'
 import { IoMdCall } from 'react-icons/io'
 import React from 'react'
