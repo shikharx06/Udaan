@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export const AppConfig = {
   site_name: 'Udaan',
   title: 'Udaan',
