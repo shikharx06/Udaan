@@ -80,6 +80,7 @@ export const AppConfig = {
         experience: '30 YEARS OF EXPERIENCE IN SEED INDUSTRY',
         designation: 'EXECUTIVE DIRECTOR',
         description: 'NGO - AAKANSHA CHARITABLE TRUST',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
       {
         name: 'DR.SAINIDHI AGNIHOTRI',
@@ -87,6 +88,7 @@ export const AppConfig = {
         experience: '',
         designation: 'DIRECTOR',
         description: 'Covid Warrior | Co Founder Dr.Buddies',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
       {
         name: 'NISHITH PATEL',
@@ -94,6 +96,7 @@ export const AppConfig = {
         experience: '',
         designation: 'DIRECTOR',
         description: 'Covid Warrior | Co Founder Dr.Buddies',
+        imageSrc: '/assets/images/teamPhotos/nishith.png',
       },
       {
         name: 'ARCHANA THAKUR',
@@ -101,6 +104,7 @@ export const AppConfig = {
         experience: '15 YEARS',
         designation: 'DIRECTOR',
         description: 'TRAVELS AND EVENT MANAGEMENT',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
     ],
 
@@ -109,30 +113,34 @@ export const AppConfig = {
         name: 'SHUBHAM AGNIHOTRI',
         qualification: 'B.Tech',
         experience: '2.5 years',
-        designation: 'TECH. ADVISER',
+        designation: 'Technical Advisor',
         description: 'Data Scientist',
+        imageSrc: '/assets/images/teamPhotos/shubham.jpg',
       },
       {
         name: 'AVL SAI GANESH',
         qualification: 'B.E (ELECTRONICS & COMM)',
         experience: '1 Year',
-        designation: 'TECH. ADVISER',
+        designation: 'Technical Advisor',
         description: 'Data Analyst',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
       {
         name: 'PRACHI TRIPATHI',
         qualification: 'B.Tech (ELECTRONICS & COMM)',
         experience: '1 Year',
-        designation: 'TECH. ADVISER',
+        designation: 'Technical Advisor',
         description:
           'Software developer, Strategy & Consulting - Business Process Management (Utilities Industry)',
+        imageSrc: '/assets/images/teamPhotos/prachi.jpg',
       },
       {
         name: 'KARTIK SINGH',
         qualification: 'B.TECH (ELECTRONICS & COMM)',
         experience: '2.5 years',
-        designation: 'TECH. ADVISER',
+        designation: 'Technical Advisor',
         description: '',
+        imageSrc: '/assets/images/teamPhotos/kartik.jpg',
       },
     ],
 
@@ -143,6 +151,7 @@ export const AppConfig = {
         experience: '',
         designation: 'RESEARCH ADV.',
         description: 'ORGANIC INSPECTOR | NGO - YOUNG GENERATION',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
       {
         name: 'KESHAV CHOUHAN ',
@@ -150,6 +159,7 @@ export const AppConfig = {
         experience: '',
         designation: 'RESEARCH ADV.',
         description: '',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
       {
         name: 'DIGVIJAY SINGH SIROHI',
@@ -157,6 +167,7 @@ export const AppConfig = {
         experience: '',
         designation: 'RESEARCH ADV.',
         description: 'MANAGING DIRECTOR @ MAXS Plant science Pvt.LTD.',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
     ],
 
@@ -168,6 +179,7 @@ export const AppConfig = {
         designation: '',
         description:
           'More than 3 decades of work Experience Across Various Industries including many of the Large listed Corporates of India',
+        imageSrc: '/assets/images/teamPhotos/anilMehra.jpg',
       },
       {
         name: 'PRATIK BULANI ',
@@ -175,6 +187,7 @@ export const AppConfig = {
         experience: '',
         designation: 'DISA (Systemt Auditor), FAFD (Forensic Auditor)',
         description: '',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
       {
         name: 'CHIRAG CHOKSI',
@@ -182,6 +195,7 @@ export const AppConfig = {
         experience: '',
         designation: '',
         description: '',
+        imageSrc: '/assets/images/teamPhotos/balendu.jpg',
       },
     ],
   },

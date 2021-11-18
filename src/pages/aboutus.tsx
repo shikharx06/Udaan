@@ -63,7 +63,7 @@ const About = () => (
               qualification={member.qualification}
               description={member.description}
               designation={member.designation}
-              src=""
+              imageSrc={member.imageSrc}
             />
           ))}
         </div>
@@ -78,7 +78,7 @@ const About = () => (
               qualification={member.qualification}
               description={member.description}
               designation={member.designation}
-              src=""
+              imageSrc={member.imageSrc}
             />
           ))}
         </div>
@@ -93,7 +93,7 @@ const About = () => (
               qualification={member.qualification}
               description={member.description}
               designation={member.designation}
-              src=""
+              imageSrc={member.imageSrc}
             />
           ))}
         </div>
@@ -108,7 +108,7 @@ const About = () => (
               qualification={member.qualification}
               description={member.description}
               designation={member.designation}
-              src=""
+              imageSrc={member.imageSrc}
             />
           ))}
         </div>
