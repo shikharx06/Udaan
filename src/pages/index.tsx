@@ -1,9 +1,7 @@
-import React from "react";
-
-import Card from "../components/card";
-import { Meta } from "../layout/Meta";
-import { Main } from "../templates/Main";
-import { AppConfig } from "../utils/AppConfig";
+import Card from '../components/card';
+import { Meta } from '../layout/Meta';
+import { Main } from '../templates/Main';
+import { AppConfig } from '../utils/AppConfig';
 // const videoUrl = require('../../public/assets/video/video.mp4');
 
 const Index = () => {

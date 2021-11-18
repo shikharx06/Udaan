@@ -1,8 +1,9 @@
-import { Meta } from "../layout/Meta";
-import { Main } from "../templates/Main";
-import { MdOutlineAddLocationAlt } from "react-icons/md";
-import { IoMdCall } from "react-icons/io";
-import React from "react";
+import { IoMdCall } from 'react-icons/io';
+import { MdOutlineAddLocationAlt } from 'react-icons/md';
+
+import { Meta } from '../layout/Meta';
+import { Main } from '../templates/Main';
+
 const Contact = () => (
   <Main
     meta={
@@ -54,7 +55,7 @@ const Contact = () => (
           width="100%"
           height="100%"
           className="absolute top-0 bottom-0 rounded-xl"
-          style={{ border: "0" }}
+          style={{ border: '0' }}
           allowFullScreen
           loading="lazy"
         />

@@ -1,7 +1,7 @@
-import { TeamMemberCard } from "../components/teamCard";
-import { Meta } from "../layout/Meta";
-import { Main } from "../templates/Main";
-import { AppConfig } from "../utils/AppConfig";
+import { TeamMemberCard } from '../components/teamCard';
+import { Meta } from '../layout/Meta';
+import { Main } from '../templates/Main';
+import { AppConfig } from '../utils/AppConfig';
 
 const About = () => (
   <Main
