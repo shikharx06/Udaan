@@ -45,7 +45,9 @@ const Contact = () => (
             <h2 className="text-2xl font-semibold text-primary-content">
               Give us a ring
             </h2>
-            <p>B 505, Narnarayan Complex, Navrangpura , Ahmedabad</p>
+            <a href="tel:PHONE_NUM" className="">
+              +91-7940077066
+            </a>
           </div>
         </div>
       </div>

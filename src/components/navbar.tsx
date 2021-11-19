@@ -34,7 +34,7 @@ const NavBar = () => {
     visible: {
       x: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.325,
       },
     },
   };
@@ -44,7 +44,7 @@ const NavBar = () => {
   const router = useRouter();
   return (
     <>
-      <div className="fixed top-0 z-40 w-full navbar bg-primary text-primary-content">
+      <div className="fixed top-0 z-40 w-full bg-scroll navbar bg-primary bg-opacity-80 backdrop-blur text-primary-content">
         <div className="flex-1 px-2 mx-2">
           <div className="w-16">
             <img src="/assets/images/udaanLogo.svg" alt="udaan" />
@@ -93,7 +93,7 @@ const NavBar = () => {
         variants={navAnimationConfig}
         initial="hidden"
         animate={isOpen ? 'visible' : 'hidden'}
-        className="fixed top-0 z-50 flex flex-col w-2/3 h-screen bg-primary "
+        className="fixed top-0 z-50 flex flex-col w-2/3 h-screen pt-10 bg-primary "
       >
         {navItems.map((navItem) => (
           <Link key={navItem.name} href={navItem.href} passHref>

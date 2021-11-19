@@ -15,9 +15,9 @@ const Card = (props: CardType) => {
   const { ref, inView } = useInView();
 
   const scaleUpAnimationConfig = {
-    hidden: { scale: 0 },
+    hidden: { opacity: 0.6 },
     visible: {
-      scale: 1,
+      opacity: 1,
       transition: {
         duration: 0.5,
       },
@@ -44,19 +44,19 @@ const Card = (props: CardType) => {
 
   return (
     <div
-      className={`container flex flex-col flex-wrap ${
+      className={`container flex flex-col   ${
         props.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
-      } gap-6 xl:gap-24`}
+      } gap-10 xl:gap-24`}
     >
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={scaleUpAnimationConfig}
-        className="max-w-md"
+        className="lg:max-w-md "
       >
         <img
-          className="w-full shadow-2xl rounded-xl"
+          className="w-full h-48 shadow-2xl md:h-auto rounded-xl"
           src={props.src}
           alt=""
           width="384"
@@ -68,12 +68,13 @@ const Card = (props: CardType) => {
         initial="hidden"
         animate={controls}
         variants={fadeInAnimationConfig}
-        className="flex-1 text-center lg:text-left lg:m-auto"
+        className="flex-1 max-w-max lg:text-left lg:m-auto"
       >
-        <h1 className="text-2xl font-semibold uppercase xl:text-3zxl text-primary-content">
+        <h1 className="mt-2 text-2xl font-semibold uppercase md:mt-0 xl:text-2xl text-primary-content">
           {props.title}
         </h1>
-        <p className="mt-6 text-lg text-center lg:text-left text-primary-content xl:text-lg">
+        <div className="w-10 h-2 border-b-2 border-black"></div>
+        <p className="mt-6 text-lg text-left overflow-ellipsis lg:text-left text-primary-content xl:text-lg">
           {props.description}
         </p>
       </motion.div>

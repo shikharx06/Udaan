@@ -1,10 +1,9 @@
-import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from 'react-icons/fa';
-
 type TeamMember = {
   name: string;
   description: string;
   designation: string;
   qualification: string;
+  experience: string;
   imageSrc: string;
 };
 
@@ -20,20 +19,17 @@ export const TeamMemberCard = (props: TeamMember) => {
           height="512"
         />
       </div>
-
-      <div className="flex-1 pt-6 space-y-4 text-center md:p-8 md:text-left">
+      <div className="flex-1 max-w-md pt-6 space-y-2 text-center md:p-8 md:text-left">
         <blockquote>
-          <p className="text-lg font-semibold">{props.name}</p>
+          <p className="text-xl font-semibold">{props.name}</p>
         </blockquote>
         <figcaption className="font-medium">
           {/* <div className="text-cyan-600">{props.name}{props.description}</div> */}
-          <div className="text-sm text-gray-500">{props.designation}</div>
-          <div className="text-xs text-gray-500">{props.qualification}</div>
+          <div className="text-gray-700 text-md">{props.designation}</div>
+          <div className="text-sm text-gray-600">{props.qualification}</div>
         </figcaption>
         <div className="flex justify-center gap-6 text-2xl md:justify-start">
-          <FaLinkedin className="text-[#0A66C2]" />
-          <FaFacebookSquare className="text-[#0A66C2]" />
-          <FaTwitterSquare className="text-[#1da1f2] " />
+          <div className="text-sm text-gray-600">{props.experience}</div>
         </div>
       </div>
     </figure>
