@@ -13,9 +13,9 @@ const NavBar = () => {
       href: '/',
     },
     {
-      name: 'blogs',
+      name: 'events',
       disabled: true,
-      href: '/blogs',
+      href: '/events',
     },
     {
       name: 'about us',

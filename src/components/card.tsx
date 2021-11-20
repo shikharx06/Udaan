@@ -15,9 +15,10 @@ const Card = (props: CardType) => {
   const { ref, inView } = useInView();
 
   const scaleUpAnimationConfig = {
-    hidden: { opacity: 0.6 },
+    hidden: { opacity: 0.6, y: -10 },
     visible: {
       opacity: 1,
+      y: 0,
       transition: {
         duration: 0.5,
       },

@@ -1,4 +1,7 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import Card from '../components/card';
 import { Meta } from '../layout/Meta';
@@ -8,8 +11,19 @@ import { AppConfig } from '../utils/AppConfig';
 // const videoUrl = require('../../public/assets/video/video.mp4');
 
 const Index = () => {
-  // const router = useRouter();
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
 
+  const scaleUpAnimationConfig = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   const fadeInAnimationConfig = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,6 +33,15 @@ const Index = () => {
       },
     },
   };
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+    if (!inView) {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
 
   return (
     <Main
@@ -56,13 +79,7 @@ const Index = () => {
           style={{
             backgroundImage: "url('./assets/images/udaanDroneHeroImage.jpg')",
           }}
-        >
-          {/* <img
-            alt=""
-            className=""
-            src="./assets/images/udaanDroneHeroImage.jpg"
-          /> */}
-        </div>
+        ></div>
       </section>
 
       <section className="flex flex-col items-center gap-24 mt-8 xl:mt-24 bg-primary">
@@ -83,8 +100,44 @@ const Index = () => {
         </div>
       </section>
       <section className="flex flex-col items-center gap-24 mt-8 xl:mt-24 bg-primary">
-        <div>
-          <h1 className="text-4xl font-semibold">Recent Events</h1>
+        <div className="flex flex-col items-center p-10 text-center max-w-screen-2xl xl:p-24">
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={scaleUpAnimationConfig}
+          >
+            <h1 className="text-2xl font-semibold">
+              <span className="text-3xl">“ </span>We witnessed S.Agri
+              Udaan&lsquo;s drone launch and presentation and realized how
+              effective, resource efficient and environment friendly farming can
+              be using drones. The government is fully supporting the use of
+              drone technology, and I personally ask our farmers to come forward
+              and reap benefits of S Agri Udaan&lsquo;s exceptional services.{' '}
+              <span className="text-3xl">“</span>
+            </h1>
+          </motion.div>
+
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={scaleUpAnimationConfig}
+            className="flex flex-col items-center"
+          >
+            <img
+              src="/assets/images/teamPhotos/parbatBhai.png"
+              width="600"
+              height="512"
+              alt=""
+              className="w-32 h-32 mt-4 rounded-full"
+            />
+            <h1 className="mt-4 text-lg font-semibold">
+              {' '}
+              Mr. Parbat Bhai Patel
+            </h1>
+            <p>Member of Parliament (Lok Sabha)</p>
+          </motion.div>
         </div>
       </section>
       <section className="flex items-center justify-center mt-8 overflow-hidden bg-black xl:mt-24">
