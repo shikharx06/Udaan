@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import { motion, useAnimation } from 'framer-motion';
+import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
 type EventCardType = {
@@ -43,30 +44,32 @@ const EventCard = (props: EventCardType) => {
     >
       {!props.empty && (
         <>
-          {' '}
-          <a href="/events/inauguration">
-            <img className="rounded-t-lg " src={props.src} alt="" />
-          </a>
+          <Link href="/events/inauguration" passHref>
+            <a>
+              <img className="rounded-t-lg " src={props.src} alt="" />
+            </a>
+          </Link>
           <div className="p-5">
             <div className="p-1 px-2 mb-2 bg-blue-300 bg-opacity-50 rounded-md max-w-max">
               <span className="text-sm font-semibold leading-normal text-blue-700 uppercase">
                 Media
               </span>
             </div>
-            <a href="#">
-              <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 md:text-xl">
-                {props.title}
-              </h5>
-            </a>
+            <Link href="/events/inauguration" passHref>
+              <a>
+                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 md:text-xl">
+                  {props.title}
+                </h5>
+              </a>
+            </Link>
             <p className="mb-3 font-normal text-gray-700 ">
               {props.description}
             </p>
-            <a
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blue-700 hover:border-none"
-              href="#"
-            >
-              Read more {'>'}
-            </a>
+            <Link href="/events/inauguration" passHref>
+              <a className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blue-700 hover:border-none">
+                Read more {'>'}
+              </a>
+            </Link>
           </div>
         </>
       )}

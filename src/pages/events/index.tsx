@@ -36,7 +36,7 @@ const Events = () => {
           variants={container}
           initial="hidden"
           animate="show"
-          className="flex flex-wrap gap-2 overflow-hidden md:gap-8"
+          className="flex flex-wrap justify-center gap-2 overflow-hidden md:gap-8"
         >
           <motion.div variants={item}>
             <EventCard
